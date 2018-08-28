@@ -82,21 +82,21 @@ class GithubService {
     }
     
     // Подгоавливаем ссылку на получение токена
-    var request = URLRequest(url: GithubService.accessTokenURL)
-    request.httpMethod = "POST"
-    request.addValue("application/json", forHTTPHeaderField: "Accept")
+    // var request = URLRequest(url: GithubService.accessTokenURL)
+    // request.httpMethod = "POST"
+    //request.addValue("application/json", forHTTPHeaderField: "Accept")
     
     // Различные параметры
-    let clientIDQuery     = URLQueryItem(name: "client_id", value: self.clientID!)
-    let clientSecretQuery = URLQueryItem(name: "client_secret", value: self.clientSecret!)
-    let codeQuery         = URLQueryItem(name: "code", value: accessCode)
-    let redirectURIQuery  = URLQueryItem(name: "redirect_uri", value: GithubService.redirectURL.absoluteString)
+    //let clientIDQuery     = URLQueryItem(name: "client_id", value: self.clientID!)
+    // let clientSecretQuery = URLQueryItem(name: "client_secret", value: self.clientSecret!)
+    // let codeQuery         = URLQueryItem(name: "code", value: accessCode)
+    // let redirectURIQuery  = URLQueryItem(name: "redirect_uri", value: GithubService.redirectURL.absoluteString)
     
     // Добавляем параметры к ссылке
-    var components = URLComponents(string: GithubService.accessTokenURL.absoluteString)
-    components?.queryItems = [clientIDQuery, clientSecretQuery, codeQuery, redirectURIQuery]
+    // var components = URLComponents(string: GithubService.accessTokenURL.absoluteString)
+    // components?.queryItems = [clientIDQuery, clientSecretQuery, codeQuery, redirectURIQuery]
     
-    request.url = components?.url
+    // request.url = components?.url
     
     // Запускаем процесс обмена данными
     
