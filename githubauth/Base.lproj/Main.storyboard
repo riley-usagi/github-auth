@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="kkG-PX-G2U" kind="show" id="4Cc-bb-QPu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,13 +53,41 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oMb-IG-Y8p"/>
-                    <connections>
-                        <segue destination="61k-P0-umI" kind="show" identifier="toGistSegue" id="YlM-Za-5pO"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mm-sV-FAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1111.875" y="117.25352112676056"/>
+        </scene>
+        <!--Gist Files List-->
+        <scene sceneID="c33-Ht-vYh">
+            <objects>
+                <tableViewController id="kkG-PX-G2U" customClass="GistFilesList" customModule="githubauth" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CIy-Ib-b0r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gistFileCell" id="Bca-MB-5UA">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bca-MB-5UA" id="30N-rI-HDE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="61k-P0-umI" kind="show" id="PVX-WM-pUX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kkG-PX-G2U" id="cvd-zl-ahq"/>
+                            <outlet property="delegate" destination="kkG-PX-G2U" id="iik-CJ-Ums"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hav-nU-MoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="117"/>
         </scene>
         <!--Gist Screen-->
         <scene sceneID="9g4-lR-6th">
@@ -83,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKH-aF-tEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995" y="116.19718309859155"/>
+            <point key="canvasLocation" x="2951" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ARH-us-uX2">
